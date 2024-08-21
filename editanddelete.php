@@ -16,7 +16,9 @@
         padding: 0;
     }
 
-    tr, th, td{
+    tr,
+    th,
+    td {
         font-size: 12px;
     }
 
@@ -79,7 +81,8 @@
         border: 1px solid #D4D4D4;
         padding: 3px 10px;
     }
-    .tab{
+
+    .tab {
         margin: 10px 0 0 0;
     }
     </style>
@@ -100,7 +103,24 @@
             </div>
         </div>
         <div class="tab">
-            <center>-under development-</center>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td><div class="inla" style="display: flex; gap: 2px;"><input type="submit" value="Edit" style="padding: 2px 10px; background-color: #313EE9; color: white;"><input type="submit" value="Delete" style="padding: 2px 10px; background-color: #313EE9; color: white;"></div></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <!-- dashboard -->
