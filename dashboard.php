@@ -16,7 +16,9 @@
         padding: 0;
     }
 
-    tr, th, td{
+    tr,
+    th,
+    td {
         font-size: 12px;
     }
 
@@ -79,7 +81,8 @@
         border: 1px solid #D4D4D4;
         padding: 3px 10px;
     }
-    .tab{
+
+    .tab {
         margin: 10px 0 0 0;
     }
     </style>
@@ -100,35 +103,58 @@
             </div>
         </div>
         <div class="tab">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
+            <form action="" method="post">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama Mahasiswa</th>
+                            <th scope="col">Tanggal Lahir</th>
+                            <th scope="col">Asal</th>
+                            <th scope="col">Email Aktif</th>
+                            <th scope="col">Fakultas</th>
+                            <th scope="col">Prodi</th>
+                            <th scope="col">Nomer Telepon</th>
+                            <th scope="col">Nim</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- tampil data -->
+                            <?php
+                                include 'loader/koneksi.php';
+                                $sql2 = "SELECT * from mahasiswa";
+                                $q2 = mysqli_query($koneksi, $sql2);
+                                $urut = 1;
+                                while ($r2 = mysqli_fetch_array($q2)) {
+                                    $nm = $r2['namaMahasiswa'];
+                                    $tl = $r2['tanggalLahir'];
+                                    $as = $r2['asal'];
+                                    $ea = $r2['email'];
+                                    $fa = $r2['fakultas'];
+                                    $pr = $r2['prodi'];
+                                    $nt = $r2['nomerTelepon'];
+                                    $ni = $r2['nim'];
+                            ?>
+                        <!-- tampil data -->
+                        <tr>
+                            <th scope="row"><?php echo $urut++?></th>
+                            <td><?php echo $nm?></td>
+                            <td><?php echo $tl?></td>
+                            <td><?php echo $as?></td>
+                            <td><?php echo $ea?></td>
+                            <td><?php echo $fa?></td>
+                            <td><?php echo $pr?></td>
+                            <td><?php echo $nt?></td>
+                            <td><?php echo $ni?></td>
+                        </tr>
+                        <!-- tampil data -->
+                        <?php
+                            }
+                        ?>
+                        <!-- tampil data -->
+                    </tbody>
+                </table>
+            </form>
         </div>
     </div>
     <!-- dashboard -->
