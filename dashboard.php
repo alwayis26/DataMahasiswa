@@ -115,7 +115,7 @@
                 <div class="in">
                     <input type="text" name="" id="" placeholder="Cari Data">
                 </div>
-                <a href="cetak.php">Print PDF</a>
+                <a href="cetak.php" target="_blank">Print PDF</a>
             </div>
         </div>
         <div class="tab">
