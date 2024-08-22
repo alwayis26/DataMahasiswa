@@ -101,6 +101,44 @@
             display: none;
         }
     }
+
+        /* Tetapkan tinggi maksimum tabel dan tambahkan scroll */
+        .table-wrapper {
+            max-height: 450px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Pastikan header tetap di atas dan tidak bergeser */
+        .table-wrapper thead th {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: white;
+        }
+
+        /* Gaya untuk tampilan header dan konten */
+        tr,
+        th,
+        td {
+            font-size: 12px;
+        }
+
+        body {
+            background-color: #D4D4D4;
+        }
+
+        .la {
+            margin: 2rem 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: white;
+            padding: 1rem;
+            -webkit-box-shadow: -1px 0px 80px -32px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 0px 80px -32px rgba(0, 0, 0, 0.75);
+            box-shadow: -1px 0px 80px -32px rgba(0, 0, 0, 0.75);
+        }
     </style>
 
     <!-- dashboard -->
@@ -118,12 +156,12 @@
                 <a href="cetak.php" target="_blank">Print PDF</a>
             </div>
         </div>
-        <div class="tab">
+        <div class="tab" style="max-height: 450px; overflow-y: auto;">
             <form action="" method="post">
-                <table class="table">
+                <table class="table table-wrapper">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama Mahasiswa</th>
                             <th scope="col">Tanggal Lahir</th>
                             <th scope="col">Asal</th>
