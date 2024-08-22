@@ -85,11 +85,27 @@
     .tab {
         margin: 10px 0 0 0;
     }
+
+    @media print{
+        .la{
+            margin: 2rem 0;
+            padding: 1rem;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        .dasboard{
+            display: none;
+        }
+        a, input{
+            display: none;
+        }
+    }
     </style>
 
     <!-- dashboard -->
     <div class="la">
-        <p class="dashboard">Dashboard Data Mahasiswa</p>
+        <p class="dashboard">Data Mahasiswa</p>
         <div class="la-a">
             <div class="la-aa">
                 <a href="loader/loaderDC.php">Insert Data</a>
@@ -99,7 +115,7 @@
                 <div class="in">
                     <input type="text" name="" id="" placeholder="Cari Data">
                 </div>
-                <a href="">Print PDF</a>
+                <a href="cetak.php">Print PDF</a>
             </div>
         </div>
         <div class="tab">
